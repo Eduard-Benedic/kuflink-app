@@ -1,28 +1,41 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div id="site-container">
+    <Preloader />
+    <Header />
+    <section class="section">
+      <CardGrid />
+    </section>
+    <Footer />
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import CardGrid from "./components/CardGrid.vue";
+import Preloader from "./components/Preloader.vue";
+import Header from "./components/Header";
+import Footer from "./components/Footer";
 
 export default {
-  name: 'App',
+  name: "App",
   components: {
-    HelloWorld
+    CardGrid,
+    Header,
+    Footer,
+    Preloader
+  },
+  data() {
+    return {
+      loading: false
+    };
+  },
+  created() {
+    console.log(223);
+  },
+  mounted() {
+    this.loading = true;
   }
-}
+};
 </script>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
+
+
