@@ -98,7 +98,11 @@
 </template>
 <script>
 export default {
-  name: "Footer"
+  name: "Footer",
+  mounted() {
+    console.log("Footer mounted");
+    console.log(new Date().getDate());
+  }
 };
 </script>
 

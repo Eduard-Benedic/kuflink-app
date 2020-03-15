@@ -75,6 +75,9 @@ export default {
         html.style.overflowY = "visible";
       }
     });
+
+    console.log("Header mounted");
+    console.log(new Date().getDate());
   }
 };
 </script>

@@ -40,6 +40,10 @@ export default {
     gsap
       .timeline()
       .from(".card", { x: 900, duration: 0.6, opacity: 0, stagger: 0.2 }, 1);
+    console.log("card grid mounted");
   }
 };
 </script>
+
+<style lang="scss">
+</style>

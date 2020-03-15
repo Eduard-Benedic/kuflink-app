@@ -20,6 +20,8 @@ export default {
   },
   mounted() {
     this.showToggle();
+    console.log("Preloader mounted");
+    console.log(new Date().getDate());
   },
   methods: {
     showToggle() {
@@ -39,15 +41,16 @@ export default {
   justify-content: center;
   position: absolute;
   width: 100%;
-  height: 100%;
+  height: 100vh;
   background-image: linear-gradient(to bottom, $blue, $green);
   z-index: 9999;
 
   &__logo {
     color: $white;
     animation-name: scaleOut;
-    animation-duration: 1s;
+    animation-duration: 1.2s;
     animation-fill-mode: forwards;
+    fill: $white;
   }
 }
 

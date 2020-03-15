@@ -44,10 +44,15 @@ export default {
   },
   props: {
     cardText: Object
+  },
+  mounted() {
+    console.log("each card mounted");
+    console.log(Date.now());
   }
 };
 </script>
 
 <style lang="scss">
 @import "../styles/components/card.scss";
+@import "../styles/setup/_grids.scss";
 </style>
